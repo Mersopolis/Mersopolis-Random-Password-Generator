@@ -10,37 +10,24 @@ var generatePassword = function() {
   var generation = [];
   // Password generation part 1: Uppper case letters
   var includeUpper = confirm("Would you like to include upper case letters?");
-  if (includeUpper == true) {
+  if (includeUpper) {
     criteria = criteria.concat(upperCase);
-    includeLower;
   }
-  else {
-    includeLower;
-  }
-  includeUpper;
   /* DEBUG COMMAND
-  //console.log(criteria);
+  console.log(criteria);
   DEBUG COMMAND */
   // Password generation part 2: Lower case letters
   var includeLower = confirm("Would you like to include lower case letters?");
-  if (includeLower == true) {
+  if (includeLower) {
     criteria = criteria.concat(lowerCase);
-    includeNumbers;
-  }
-  else {
-    includeNumbers;
   }
   /* DEBUG COMMAND
-  //console.log(criteria);
+  console.log(criteria);
   DEBUG COMMAND */
   // Password generation part 3: Numbers
   var includeNumbers = confirm("Would you like to include numbers?");
-  if (includeNumbers == true) {
+  if (includeNumbers) {
     criteria = criteria.concat(numbers);
-    includeSpecial;
-  }
-  else {
-    includeSpecial;
   }
   /* DEBUG COMMAND
   //console.log(criteria);
@@ -48,16 +35,12 @@ var generatePassword = function() {
   // Password generation part 4: Special characters
   var includeSpecial = confirm("Would you like to include special characters?");
     // End function if no character groups were included
-  if (includeUpper == false && includeLower == false && includeNumbers == false && includeSpecial == false) {
+  if (!includeUpper && !includeLower && !includeNumbers && !includeSpecial) {
     alert("Please include at least one group of characters");
-    return;
+    return "";
   }
-  else if (includeSpecial == true) {
+  else if (includeSpecial) {
     criteria = criteria.concat(special);
-    defineLength;
-  }
-  else {
-    defineLength;
   }
   /* DEBUG COMMAND
   console.log(criteria);
@@ -70,7 +53,7 @@ var generatePassword = function() {
       max = 128;
       defineLength = Math.floor(Math.random() * (max - min + 1) + min);
       /* DEBUG COMMAND
-      //console.log(defineLength);
+      console.log(defineLength);
       DEBUG COMMAND */
       for (var i = 0; i < defineLength; i++) {
         var r = Math.floor(Math.random() * criteria.length);
@@ -82,7 +65,7 @@ var generatePassword = function() {
     // Defined length
   else {
     /* DEBUG COMMAND
-    //console.log(defineLength);
+    console.log(defineLength);
     DEBUG COMMAND */
     for (var i = 0; i < defineLength; i++) {
     var r = Math.floor(Math.random() * criteria.length);
