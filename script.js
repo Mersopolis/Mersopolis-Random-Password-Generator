@@ -1,82 +1,100 @@
-// Define character groups for password criteria
+// Defined character groups for password criteria
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var numbers = ["0","1","2","3","4","5","6","7","8","9"];
-var special = [" ","!","#","$","%","&","'","(",")","*","+",',',"-",".",'/',":",";","<","=",">","?","@","[",'\'',"]","^","_","`","{","|","}","~"];
-var doublequote = ["\""];
-var criteria = [];
-var password = [];
+var special = [" ","!",'"',"#","$","%","&","'","(",")","*","+",',',"-",".",'/',":",";","<","=",">","?","@","[","\\","]","^","_","`","{","|","}","~"];
 
 var generatePassword = function() {
+  // Clear arrays from previous generations
+  var criteria = [];
+  var generation = [];
   // Password generation part 1: Uppper case letters
-  var criteriaUpper = confirm("Would you like to include upper case letters?");
-  if (criteriaUpper == true) {
+  var includeUpper = confirm("Would you like to include upper case letters?");
+  if (includeUpper == true) {
     criteria = criteria.concat(upperCase);
-    criteriaLower;
+    includeLower;
   }
   else {
-    criteriaLower;
+    includeLower;
   }
-  criteriaUpper;
-  console.log(criteria);
+  includeUpper;
+  /* DEBUG COMMAND
+  //console.log(criteria);
+  DEBUG COMMAND */
   // Password generation part 2: Lower case letters
-  var criteriaLower = confirm("Would you like to include lower case letters?");
-  if (criteriaLower == true) {
+  var includeLower = confirm("Would you like to include lower case letters?");
+  if (includeLower == true) {
     criteria = criteria.concat(lowerCase);
-    criteriaNumbers;
+    includeNumbers;
   }
   else {
-    criteriaNumbers;
+    includeNumbers;
   }
-  console.log(criteria);
+  /* DEBUG COMMAND
+  //console.log(criteria);
+  DEBUG COMMAND */
   // Password generation part 3: Numbers
-  var criteriaNumbers = confirm("Would you like to include numbers?");
-  if (criteriaNumbers == true) {
+  var includeNumbers = confirm("Would you like to include numbers?");
+  if (includeNumbers == true) {
     criteria = criteria.concat(numbers);
-    criteriaSpecial;
+    includeSpecial;
   }
   else {
-    criteriaSpecial;
+    includeSpecial;
   }
-  console.log(criteria);
+  /* DEBUG COMMAND
+  //console.log(criteria);
+  DEBUG COMMAND */
   // Password generation part 4: Special characters
-  var criteriaSpecial = confirm("Would you like to include special characters?");
-  if (criteriaSpecial == true) {
-    criteria = criteria.concat(special, doublequote);
-    criteriaLength;
+  var includeSpecial = confirm("Would you like to include special characters?");
+    // End function if no character groups were included
+  if (includeUpper == false && includeLower == false && includeNumbers == false && includeSpecial == false) {
+    alert("Please include at least one group of characters");
+    return;
+  }
+  else if (includeSpecial == true) {
+    criteria = criteria.concat(special);
+    defineLength;
   }
   else {
-    criteriaLength;
+    defineLength;
   }
+  /* DEBUG COMMAND
   console.log(criteria);
+  DEBUG COMMAND */
   // Password generation part 5: Length
-  var criteriaLength = prompt("How many characters long should it be? (Only type whole numbers from 8 to 128 or leave blank for a random amount)");
-    console.log(typeof criteriaLength);
-    console.log(criteriaLength);
-  if (criteriaLength == "") {
-      min = Math.ceil(8);
-      max = Math.floor(128);
-      criteriaLength = Math.floor(Math.random() * (max - min + 1) + min);
-      for (var i = 0; i < criteriaLength; i++) {
-        var r = Math.floor(Math.random() * criteriaLength);
+  var defineLength = prompt("How many characters long should the password be? (Type a whole number from 8 to 128. Otherwise, the length will be randomized.)");
+    // Randomized length
+  if (defineLength < 8 || defineLength > 128 || defineLength % 1 != 0) {
+      min = 8;
+      max = 128;
+      defineLength = Math.floor(Math.random() * (max - min + 1) + min);
+      /* DEBUG COMMAND
+      //console.log(defineLength);
+      DEBUG COMMAND */
+      for (var i = 0; i < defineLength; i++) {
+        var r = Math.floor(Math.random() * criteria.length);
         var randomChar = criteria[r];
-        password = password.concat(randomChar);
-        password = password.toString();
+        generation = generation.concat(randomChar);
+        generation = generation.toString();
       }
     }
-  else if (criteriaLength < 8 || criteriaLength > 128 || criteriaLength % 1 != 0) {
-    criteriaLength;
-  }
+    // Defined length
   else {
-    for (var i = 0; i < criteriaLength; i++) {
-    var r = Math.floor(Math.random() * criteriaLength);
+    /* DEBUG COMMAND
+    //console.log(defineLength);
+    DEBUG COMMAND */
+    for (var i = 0; i < defineLength; i++) {
+    var r = Math.floor(Math.random() * criteria.length);
     var randomChar = criteria[r];
-      password = password.concat(randomChar);
-      password = password.toString();
+      generation = generation.concat(randomChar);
+      generation = generation.toString();
     }
   }
-  console.log(password);
-  criteria = [];
+  /* DEBUG COMMAND
+  console.log(generation);
+  DEBUG COMMAND */
+  return generation;
 }
 
 // Get references to the #generate element
@@ -90,6 +108,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-password = [];
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
