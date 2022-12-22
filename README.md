@@ -1,39 +1,64 @@
 # Module-3-Challenge-psychic-spork
-
+https://mersopolis.github.io/Module-3-Challenge-psychic-spork/
 
 ## Description
 Devon Ethington's Submission for Module 3 Challenge for the U of U Coding Bootcamp
 
 ## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+N/A
 
 ## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+The site should look like this when the viewport is wider than 690 pixels:<br/>
+![The site at 692p](./assets/images/Password%20Generator%20692p.png)<br/>
+Like this between 500 and 690 pixels:<br/>
+![The site at 689p](./assets/images/Password%20Generator%20689p.png)<br/>
+And like this when narrower than 500 pixels:<br/>
+![The site at 500p](./assets/images/Password%20Generator%20500p.png)
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+N/A
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Click the "Generate" button and follow the prompts to generate a password with criteria you chose.
 
 ## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+If you have any problems or questions, here is my contact info:<br/>
+Email: [mersopolis@gmail.com](mailto:mersopolis@gmail.com)<br/>
+GitHub: [Mersopolis](https://github.com/Mersopolis)
 
 ## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+I may change the criteria prompts to checkboxes and a text input on the page itself.<br/>
+I may add a button to copy the generated password to the clipboard.
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+Feel free to offer suggestions through the above Support links, make a pull request at https://github.com/Mersopolis/Module-3-Challenge-psychic-spork, or clone the code and make something of your own. Just make sure to adhere to the license below.
 
 ## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+Starter code provided by University of Utah.
+Code expanded by me: Devon Ethington.
 
 ## License
-For open source projects, say how it is licensed.
+MIT License
+
+Copyright (c) 2022 Mersopolis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+N/A
