@@ -1,8 +1,8 @@
-# Module-3-Challenge-psychic-spork
-https://mersopolis.github.io/Module-3-Challenge-psychic-spork/
+# Mersopolis-Random-Password-Generator
+https://mersopolis.github.io/Mersopolis-Random-Password-Generator/
 
 ## Description
-Devon Ethington's Submission for Module 3 Challenge for the U of U Coding Bootcamp
+A web app for generating passwords with certain criteria
 
 ## Badges
 N/A
@@ -31,7 +31,7 @@ I may change the criteria prompts to checkboxes and a text input on the page its
 I may add a button to copy the generated password to the clipboard.
 
 ## Contributing
-Feel free to offer suggestions through the above Support links, make a pull request at https://github.com/Mersopolis/Module-3-Challenge-psychic-spork, or clone the code and make something of your own. Just make sure to adhere to the license below.
+Feel free to offer suggestions through the above Support links, make a pull request at https://github.com/Mersopolis/Mersopolis-Random-Password-Generator, or clone the code and make something of your own. Just make sure to adhere to the license below.
 
 ## Authors and acknowledgment
 Starter code provided by University of Utah.
